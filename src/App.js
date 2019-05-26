@@ -1,9 +1,9 @@
 import React from 'react';
 import { HashRouter, Route, Link } from "react-router-dom";
-import  {Business} from './Components/Business/Business';
+import  {Startups} from './Components/Startups/Startups';
 import  {Health} from './Components/Health/Health';
 import  {Home} from './Components/Home/Home';
-import  {Science} from './Components/Science/Science';
+import  {Food} from './Components/Food/Food';
 import  {Sport} from './Components/Sport/Sport';
 import  {Tech} from './Components/Tech/Tech';
 import { slide as Menu } from 'react-burger-menu'
@@ -32,8 +32,8 @@ class App extends React.Component {
                     <Link to="/" onClick={() => this.closeMenu()}>Home</Link>
                     <Link to="/Sport/" onClick={() => this.closeMenu()}>Sport</Link>
                     <Link to="/Tech/" onClick={() => this.closeMenu()}>Tech</Link>
-                    <Link to="/Business/" onClick={() => this.closeMenu()}>Business</Link>
-                    <Link to="/Science/" onClick={() => this.closeMenu()}>Science</Link>
+                    <Link to="/Startups/" onClick={() => this.closeMenu()}>Startups</Link>
+                    <Link to="/Food/" onClick={() => this.closeMenu()}>Food</Link>
                     <Link to="/Health/" onClick={() => this.closeMenu()}>Health</Link>
                     <Link onClick={() => this.closeMenu()}>Install News App</Link>
                 </Menu>
@@ -44,8 +44,8 @@ class App extends React.Component {
                     <Route path="/" exact component={Home} />
                     <Route path="/Sport/" component={Sport} />
                     <Route path="/Tech/" component={Tech} />
-                    <Route path="/Business/" component={Business} />
-                    <Route path="/Science/" component={Science} />
+                    <Route path="/Startups/" component={Startups} />
+                    <Route path="/Food/" component={Food} />
                     <Route path="/Health/" component={Health} />
 
 
@@ -85,10 +85,10 @@ export default App;
 //                 <Link to="/Tech/">Tech</Link>
 //               </li>
 //               <li>
-//                 <Link to="/Business/">Business</Link>
+//                 <Link to="/Startups/">Startups</Link>
 //               </li>
 //               <li>
-//                 <Link to="/Science/">Science</Link>
+//                 <Link to="/Food/">Food</Link>
 //               </li>
 //               <li>
 //                 <Link to="/Health/">Health</Link>
@@ -98,8 +98,8 @@ export default App;
 //           <Route path="/" exact component={Home} />
 //           <Route path="/Sport/" component={Sport} />
 //           <Route path="/Tech/" component={Tech} />
-//           <Route path="/Business/" component={Business} />
-//           <Route path="/Science/" component={Science} />
+//           <Route path="/Startups/" component={Startups} />
+//           <Route path="/Food/" component={Food} />
 //           <Route path="/Health/" component={Health} />
 //         </div>
 //       </HashRouter>

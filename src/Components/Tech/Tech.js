@@ -1,7 +1,10 @@
 import React from 'react';
+import articles from "../../Data/Tech";
 
 export function Tech() {
+    const thisIsMyCopy = articles[5].data;
     return (
-        <h1>Tech</h1>
+        <div  dangerouslySetInnerHTML={{__html: thisIsMyCopy}}></div>
+
     );
 };

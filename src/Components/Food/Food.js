@@ -1,8 +1,8 @@
 import React from 'react';
-import articles from "../../Data/Health";
+import articles from "../../Data/Food";
 
-export function Health() {
-    const thisIsMyCopy = articles[5].data;
+export function Food() {
+    const thisIsMyCopy = articles[2].data;
     return (
         <div  dangerouslySetInnerHTML={{__html: thisIsMyCopy}}></div>
 
