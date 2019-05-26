@@ -2,11 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { HashRouter, Route, Link } from "react-router-dom";
-import  {Sport} from './Components/Sport';
-import  {Technology} from './Components/Technology';
-import  {Telecommunications} from './Components/Telecommunications';
+import  {Business} from './Components/Business/Business';
+import  {Health} from './Components/Health/Health';
+import  {Home} from './Components/Home/Home';
+import  {Science} from './Components/Science/Science';
+import  {Sport} from './Components/Sport/Sport';
+import  {Tech} from './Components/Tech/Tech';
 
-import { createHistory } from "history";
+
 function App() {
   // basename={process.env.PUBLIC_URL}
   return (
@@ -15,20 +18,35 @@ function App() {
           <nav>
             <ul>
               <li>
-                <Link to="/">Sport</Link>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/Technology/">Technology</Link>
+                <Link to="/Sport/">Sport</Link>
               </li>
               <li>
-                <Link to="/Telecommunications/">Telecommunications</Link>
+                <Link to="/Tech/">Tech</Link>
+              </li>
+              <li>
+                <Link to="/Business/">Business</Link>
+              </li>
+              <li>
+                <Link to="/Science/">Science</Link>
+              </li>
+              <li>
+                <Link to="/Health/">Health</Link>
               </li>
             </ul>
           </nav>
 
-          <Route path="/" exact component={Sport} />
-          <Route path="/Technology/" component={Technology} />
-          <Route path="/Telecommunications/" component={Telecommunications} />
+
+
+
+          <Route path="/" exact component={Home} />
+          <Route path="/Sport/" component={Sport} />
+          <Route path="/Tech/" component={Tech} />
+          <Route path="/Business/" component={Business} />
+          <Route path="/Science/" component={Science} />
+          <Route path="/Health/" component={Health} />
         </div>
       </HashRouter>
   );
