@@ -1,14 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import  {Sport} from './Components/Sport';
 import  {Technology} from './Components/Technology';
 import  {Telecommunications} from './Components/Telecommunications';
-import history from "./Components/History";
+
+import { createHistory } from "history";
 function App() {
+
   return (
-      <Router history={history}>
+      <BrowserRouter  basename={process.env.PUBLIC_URL}>
         <div>
           <nav>
             <ul>
@@ -28,7 +30,7 @@ function App() {
           <Route path="/Technology/" component={Technology} />
           <Route path="/Telecommunications/" component={Telecommunications} />
         </div>
-      </Router>
+      </BrowserRouter>
   );
 }
 // function App() {
