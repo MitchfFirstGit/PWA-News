@@ -8,9 +8,9 @@ import  {Telecommunications} from './Components/Telecommunications';
 
 import { createHistory } from "history";
 function App() {
-
+  // basename={process.env.PUBLIC_URL}
   return (
-      <HashRouter  basename={process.env.PUBLIC_URL}>
+      <HashRouter  >
         <div>
           <nav>
             <ul>
