@@ -1,8 +1,10 @@
 import React from 'react';
-
+import articles from '../../Data/Sport.js';
 
 export function Sport() {
+    const thisIsMyCopy = articles[5].data;
     return (
-<h1>Sport</h1>
+        <div  dangerouslySetInnerHTML={{__html: thisIsMyCopy}}></div>
+
     );
 };
