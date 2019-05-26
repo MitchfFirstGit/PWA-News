@@ -5,9 +5,10 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import  {Sport} from './Components/Sport';
 import  {Technology} from './Components/Technology';
 import  {Telecommunications} from './Components/Telecommunications';
+import history from "./Components/History";
 function App() {
   return (
-      <Router>
+      <Router history={history}>
         <div>
           <nav>
             <ul>
