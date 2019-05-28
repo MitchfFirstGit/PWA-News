@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import articles from "../../Data/Food";
-// import styled from '@emotion/styled';
-import {Item} from '../Item/Item';
+import styled from "@emotion/styled";
+import { HashRouter, Route, Link } from "react-router-dom";
+import {Article} from "../Article/Article";
+
+const StyledWraper = styled.div`
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+`;
+const StyledHeader = styled.h1`
+
+`;
 
 export function Food() {
-    const thisIsMyCopy = articles[2].data;
+
     return (
-        <div>
-            {articles.map(item => <Item item ={item}/> )}
-        </div>
-
-
+        <>
+            <StyledHeader>{Food}</StyledHeader>
+            <HashRouter>
+        <StyledWraper>
+            {articles.map((item, i) =>    <Article  item ={item}/>)}
+        </StyledWraper>
+            </HashRouter>
+        </>
     );
 };
-
-//<div  dangerouslySetInnerHTML={{__html: thisIsMyCopy}}></div>

@@ -8,6 +8,8 @@ import  {Sport} from './Components/Sport/Sport';
 import  {Tech} from './Components/Tech/Tech';
 import { slide as Menu } from 'react-burger-menu'
 import './App.scss';
+import {Item} from "./Components/Item/Item";
+
 class App extends React.Component {
     constructor (props) {
         super(props)
@@ -45,7 +47,8 @@ class App extends React.Component {
                     <Route path="/Sport/" component={Sport} />
                     <Route path="/Tech/" component={Tech} />
                     <Route path="/Startups/" component={Startups} />
-                    <Route path="/Food/" component={Food} />
+                    <Route exact path="/Food/" component={Food} />
+                    <Route path="/Food/:id" render={(props) => <Item {...props} />} />
                     <Route path="/Health/" component={Health} />
 
 
