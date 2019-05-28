@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import articles from "../../Data/Food";
+import React from 'react';
+import articlesFood from "../../Data/Food";
 import styled from "@emotion/styled";
-import { HashRouter, Route, Link } from "react-router-dom";
-import {Article} from "../Article/Article";
+import { HashRouter} from "react-router-dom";
+import {CardArticle} from "../CardArticle/CardArticle";
 
 const StyledWraper = styled.div`
 display: flex;
@@ -17,10 +17,12 @@ export function Food() {
 
     return (
         <>
-            <StyledHeader>{Food}</StyledHeader>
+
             <HashRouter>
         <StyledWraper>
-            {articles.map((item, i) =>    <Article  item ={item}/>)}
+
+
+            {articlesFood.map((item, i) =>    <CardArticle item ={item}/>)}
         </StyledWraper>
             </HashRouter>
         </>

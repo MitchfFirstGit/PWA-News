@@ -8,7 +8,42 @@ import  {Sport} from './Components/Sport/Sport';
 import  {Tech} from './Components/Tech/Tech';
 import { slide as Menu } from 'react-burger-menu'
 import './App.scss';
-import {Item} from "./Components/Item/Item";
+import {Article} from "./Components/Article/Article";
+import styled from '@emotion/styled';
+
+import articlesHealth from './Data/Health';
+import articlesFood from './Data/Food';
+import articlesSport from './Data/Sport';
+import articlesStartups from './Data/Startups';
+import articlesTech from './Data/Tech';
+
+const StyledImg = styled.img`
+    height: 40px ;
+    width: 40px ;
+    
+    @media (min-width: 500px) {
+        height: 50px ;
+        width: 50px ;
+        margin-right: 10px;
+  }
+`;
+
+const StyledWrap = styled.div`
+  background-color: #373A47;
+  height: 75px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const StyledHeader = styled.h1`
+  color: white;
+  font-size: 1.3rem;
+  font-family: Gabriela;
+  @media (min-width: 500px) {
+    font-size: 2rem;
+  }
+`;
 
 class App extends React.Component {
     constructor (props) {
@@ -39,19 +74,26 @@ class App extends React.Component {
                     <Link to="/Health/" onClick={() => this.closeMenu()}>Health</Link>
                     <Link onClick={() => this.closeMenu()}>Install News App</Link>
                 </Menu>
-                <div className='wrap'>
-                    <img src={require('./assets/inverted-offline.png')} alt='' style={{height: 50, marginRight: 10}}/>
-                    Progressive News App
-                </div>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/Sport/" component={Sport} />
-                    <Route path="/Tech/" component={Tech} />
-                    <Route path="/Startups/" component={Startups} />
-                    <Route exact path="/Food/" component={Food} />
-                    <Route path="/Food/:id" render={(props) => <Item {...props} />} />
-                    <Route path="/Health/" component={Health} />
+                <StyledWrap >
+                    <StyledImg src={require('./assets/inverted-offline.png')} alt='' />
+                    <StyledHeader>Progressive News App</StyledHeader>
+
+                </StyledWrap>
+
+                <Route exact path="/"  component={Home} />
+                <Route exact path="/Sport/" component={Sport} />
+                <Route exact path="/Tech/" component={Tech} />
+                <Route exact path="/Startups/" component={Startups} />
+                <Route exact path="/Food/" component={Food} />
+                <Route exact path="/Health/" component={Health} />
 
 
+                <Route path="/Sport/:id" render={(props) => <Article {...props} articles ={articlesSport}/>} />
+                <Route path="/Tech/:id" render={(props) => <Article {...props} articles ={articlesTech}/>} />
+
+                <Route path="/Startups/:id"  render={(props) => <Article {...props} articles ={articlesStartups}/>}  />
+                <Route path="/Food/:id" render={(props) => <Article {...props} articles ={articlesFood}/>} />
+                <Route path="/Health/:id"  render={(props) => <Article {...props} articles ={articlesHealth}/>}  />
             </HashRouter>
 
         );
@@ -60,54 +102,3 @@ class App extends React.Component {
 export default App;
 
 
-//
-// <a id="home" className="menu-item" href="/">Home</a>
-// <a id="about" className="menu-item" href="/about">About</a>
-// <a id="contact" className="menu-item" href="/contact">Contact</a>
-// <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
-
-
-
-
-//
-//
-// function App() {
-//
-//   return (
-//       <HashRouter  >
-//         <div>
-//           <nav>
-//             <ul>
-//               <li>
-//                 <Link to="/">Home</Link>
-//               </li>
-//               <li>
-//                 <Link to="/Sport/">Sport</Link>
-//               </li>
-//               <li>
-//                 <Link to="/Tech/">Tech</Link>
-//               </li>
-//               <li>
-//                 <Link to="/Startups/">Startups</Link>
-//               </li>
-//               <li>
-//                 <Link to="/Food/">Food</Link>
-//               </li>
-//               <li>
-//                 <Link to="/Health/">Health</Link>
-//               </li>
-//             </ul>
-//           </nav>
-//           <Route path="/" exact component={Home} />
-//           <Route path="/Sport/" component={Sport} />
-//           <Route path="/Tech/" component={Tech} />
-//           <Route path="/Startups/" component={Startups} />
-//           <Route path="/Food/" component={Food} />
-//           <Route path="/Health/" component={Health} />
-//         </div>
-//       </HashRouter>
-//   );
-// }
-//
-//
-// export default App;

@@ -1,4 +1,4 @@
-const articles = [
+const articlesFood = [
     {
         slugName: "0",
     longTitle: "Can Music Really Affect Your Food Choices?",
@@ -43,4 +43,4 @@ const articles = [
     },
 
 ];
-export default articles;
+export default articlesFood;

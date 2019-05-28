@@ -1,41 +1,26 @@
 import React from 'react';
-import styled from "@emotion/styled";
-import {Link} from "react-router-dom";
+import styled from '@emotion/styled';
+import './styles.css';
 
-// const StyledWraper = styled.div`
-// display: flex;
-// flex-wrap: wrap;
-// justify-content: space-around;
-// `;
-
-
-const StyledDiv = styled.div`
-
-     border: 0 solid transparent;
-    border-radius: .25rem;
-    width: 350px;
-        -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.4);
-    box-shadow: 0 1px 4px rgba(0,0,0,.4);
-    margin-bottom: 5%;
-`;
 const StyledImg = styled.img`
     width: 100%;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
+`;
+const StyledHeader = styled.h2`
 
 `;
-export function Article({item}) {
+
+
+
+export function Article(props) {
+    console.log(props.articles);
+    const id = props.match.params.id;
+
+    const item = props.articles.find(item => item.slugName === id);
 
     return (
 
-        <>
-<Link to = {item.slugName}>
-            <StyledDiv>
-                <StyledImg src={item.img} />
-                <p>{item.shortTitle}</p>
-            </StyledDiv>
-</Link>
-        </>
-
+        <div  dangerouslySetInnerHTML={{__html: item.data}}></div>
     );
-};
+}
+
+
