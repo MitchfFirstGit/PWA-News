@@ -34,6 +34,7 @@ const StyledWrap = styled.div`
     display: flex;
   justify-content: center;
   align-items: center;
+
 `;
 
 const StyledHeader = styled.h1`

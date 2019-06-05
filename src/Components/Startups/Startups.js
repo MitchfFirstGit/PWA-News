@@ -10,14 +10,16 @@ flex-wrap: wrap;
 justify-content: space-around;
 `;
 const StyledHeader = styled.h1`
-
+text-align: center;
+color: #373A47;
+font-size: 1.5rem;
 `;
 
 export function Startups() {
 
     return (
         <>
-
+            <StyledHeader>Startups</StyledHeader>
             <HashRouter>
                 <StyledWraper>
 

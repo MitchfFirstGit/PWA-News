@@ -9,6 +9,8 @@ const StyledDiv = styled(Link)`
         -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.4);
     box-shadow: 0 1px 4px rgba(0,0,0,.4);
     margin-bottom: 5%;
+    text-decoration: none;
+    color: black;
 `;
 const StyledImg = styled.img`
     width: 100%;
