@@ -1,13 +1,13 @@
 import React from 'react';
-import styled from '@emotion/styled';
+// import styled from '@emotion/styled';
 import './styles.css';
 
-const StyledImg = styled.img`
-    width: 100%;
-`;
-const StyledHeader = styled.h2`
+// const StyledImg = styled.img`
+//     width: 100%;
+// `;
+// const StyledHeader = styled.h2`
 
-`;
+// `;
 
 
 
@@ -19,7 +19,7 @@ export function Article(props) {
 
     return (
 
-        <div  dangerouslySetInnerHTML={{__html: item.data}}></div>
+        <div dangerouslySetInnerHTML={{ __html: item.data }}></div>
     );
 }
 
