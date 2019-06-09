@@ -1,4 +1,3 @@
-
 {
   "name": "Progressive News App",
   "short_name": "PWA-News",
@@ -37,12 +36,9 @@
   "start_url": ".",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#fff",
-  "theme_color": "#3f51b5",
-  "description": "A simple Instagram Clone, implementing a lot of PWA love.",
+  "background_color": "#5199ff",
+  "theme_color": "#5199ff",
+  "description": "A simple News app implementing a lot of PWA love.",
   "dir": "ltr",
   "lang": "en-US"
 }
-
-
-
