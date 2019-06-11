@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/PWA-News/static/css/main.88e35543.chunk.css",
+    "main.js": "/PWA-News/static/js/main.7fec831b.chunk.js",
+    "main.js.map": "/PWA-News/static/js/main.7fec831b.chunk.js.map",
+    "runtime~main.js": "/PWA-News/static/js/runtime~main.a21f9898.js",
+    "runtime~main.js.map": "/PWA-News/static/js/runtime~main.a21f9898.js.map",
+    "static/js/2.07f1278f.chunk.js": "/PWA-News/static/js/2.07f1278f.chunk.js",
+    "static/js/2.07f1278f.chunk.js.map": "/PWA-News/static/js/2.07f1278f.chunk.js.map",
+    "index.html": "/PWA-News/index.html",
+    "precache-manifest.73180639a7645cdfc12776ee1defc267.js": "/PWA-News/precache-manifest.73180639a7645cdfc12776ee1defc267.js",
+    "service-worker.js": "/PWA-News/service-worker.js",
+    "static/css/main.88e35543.chunk.css.map": "/PWA-News/static/css/main.88e35543.chunk.css.map"
+  }
+}
